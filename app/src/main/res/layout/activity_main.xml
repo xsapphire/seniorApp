@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.eventmap.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/signInLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/app_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/helloText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:shadowColor="#000"
+            android:text="Hello."
+            android:textAlignment="inherit"
+            android:textColor="#fff"
+            android:textSize="50sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/helloWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="480dp"
+            android:layout_weight="0"
+            android:paddingHorizontal="10dp"
+            android:text="Welcome to EventMap."
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginVertical="10dp"
+            android:layout_weight="0"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="0dp"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/addButtonLayer"
+        android:elevation="10dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:onClick="createEvent"
+            app:backgroundTint="@android:color/background_light"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mapLayer"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/navigation_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.eventmap.MainActivity" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/navigationLayer"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/navigation_menu"></android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

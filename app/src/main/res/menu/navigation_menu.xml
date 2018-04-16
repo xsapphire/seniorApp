@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_account"
+        android:icon="@mipmap/ic_person_black_24dp"
+        android:title="My Account" />
+
+    <item android:id="@+id/nav_settings"
+        android:icon="@mipmap/ic_event_black_24dp"
+        android:title="My hosted events" />
+
+    <item android:id="@+id/nav_logout"
+        android:icon="@mipmap/ic_label_black_24dp"
+        android:title="My interested events" />
+
+    <item android:id="@+id/nav_notification"
+        android:icon="@mipmap/ic_notifications_black_24dp"
+        android:title="Notification" />
+</menu>
