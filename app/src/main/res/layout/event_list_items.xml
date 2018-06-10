@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/single_club_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="8dp"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/eventNameHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:text="Event Name"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/timeHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp"
+                android:text="Start time - End time" />
+
+            <TextView
+                android:id="@+id/placeHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp"
+                android:text="Default place" />
+
+            <TextView
+                android:id="@+id/roomHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp"
+                android:text="Room" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="EDIT"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/deleteBtn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="DELETE"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "36337363914",
+    "firebase_url": "https://arcane-optics-200605.firebaseio.com",
+    "project_id": "arcane-optics-200605",
+    "storage_bucket": "arcane-optics-200605.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36337363914:android:05cd5c08948a8a85",
+        "android_client_info": {
+          "package_name": "com.example.eventmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36337363914-5ckgbencthv9a89m8i9gnd7l4ijkemcc.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "36337363914-chuhcpf1d2juoq9m35855s3n87ov3j9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-yxj3mb3zRgpm6kkG2PSN1g7iTYsmuT0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36337363914-5ckgbencthv9a89m8i9gnd7l4ijkemcc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

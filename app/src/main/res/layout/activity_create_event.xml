@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.eventmap.createEvent">
+    tools:context="com.example.eventmap.activities.createEvent">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <include
             android:id="@+id/include"
@@ -16,152 +17,168 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <TextView
+            android:id="@+id/eventNameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginVertical="10dp"
+            android:paddingTop="10dp"
+            android:text="Event Name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/eventNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:ems="10"
+            android:hint="Please enter your event name"
+            android:inputType="textPersonName"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/timeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:text="Time"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pickStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Select a start time"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/connectLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/pickEndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Select an end time"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/placeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:text="Place"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/selectedPlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:text="Gates building" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:text="362 Santa Street" />
+
+        <TextView
+            android:id="@+id/roomLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:text="Room"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/roomInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:ems="10"
+            android:hint="Please enter a room number or leave it blank"
+            android:inputType="textPersonName"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/descriptionLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:text="Description"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/descriptionInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:ems="10"
+            android:hint="A short description with no more than 280 words. "
+            android:inputType="textPersonName"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/inviteLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:text="Notify my club members"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/clubSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:spinnerMode="dialog" />
+
         <Button
             android:id="@+id/finishBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
             android:background="@android:color/holo_green_dark"
             android:text="Finish"
             android:textColor="#ffffff" />
 
-        <TextView
-            android:id="@+id/eventNameLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/include"
-            android:layout_marginTop="22dp"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="20dp"
-            android:text="Event name"
-            android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/startTimeLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/endTimeLabel"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="20dp"
-            android:text="Start time"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/endTimeLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/eventLocationLabel"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="20dp"
-            android:text="End time"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/eventLocationLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/locationInput"
-            android:layout_alignBottom="@+id/locationInput"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="20dp"
-            android:text="Event location"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/invitePeopleLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/eventLocationLabel"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="20dp"
-            android:text="Invite people"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/pickStartTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/eventNameInput"
-            android:layout_toEndOf="@+id/eventLocationLabel"
-            android:layout_toRightOf="@+id/eventLocationLabel"
-            android:text="Please set a start time."
-            android:paddingVertical="20dp"
-            android:textColor="#777777"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/eventNameInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/pickStartTime"
-            android:layout_alignStart="@+id/pickStartTime"
-            android:layout_alignTop="@+id/eventNameLabel"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:paddingVertical="20dp" />
-
-        <EditText
-            android:id="@+id/locationInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/pickStartTime"
-            android:layout_marginTop="66dp"
-            android:layout_toEndOf="@+id/eventLocationLabel"
-            android:layout_toRightOf="@+id/eventLocationLabel"
-            android:ems="10"
-            android:hint="building, room"
-            android:inputType="textPersonName"
-            android:paddingVertical="20dp" />
-
-        <EditText
-            android:id="@+id/inviteeInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/invitePeopleLabel"
-            android:layout_alignBottom="@+id/invitePeopleLabel"
-            android:layout_toEndOf="@+id/eventLocationLabel"
-            android:layout_toRightOf="@+id/eventLocationLabel"
-            android:ems="10"
-            android:hint="email addresses"
-            android:inputType="textPersonName"
-            android:paddingVertical="20dp" />
-
-        <CheckBox
-            android:id="@+id/inviteClubCheckbox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/inviteeInput"
-            android:layout_alignStart="@+id/inviteeInput"
-            android:layout_below="@+id/inviteeInput"
-            android:paddingVertical="20dp"
-            android:text="Invite my club members" />
-
-        <TextView
-            android:id="@+id/pickEndTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/pickStartTime"
-            android:layout_alignStart="@+id/pickStartTime"
-            android:layout_below="@+id/pickStartTime"
-            android:paddingVertical="20dp"
-            android:text="Please set an end time. "
-            android:textColor="#777777"
-            android:textSize="18sp" />
-
-
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
